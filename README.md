@@ -16,6 +16,3 @@ We are a team of software developers, we strive to simulate the Amazon website.
 
 
 
-
-![image](https://drive.google.com/file/d/1vlcmv4UhdWNyuZD9PLQb-YHSNgvgiesZ/view?usp=sharing)
-

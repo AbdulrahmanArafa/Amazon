@@ -9,6 +9,12 @@ body {
 
 
 /* global Rule */
+/*================================================================ global variable  */
+:root{
+    --mainColor: #1D5D3D;
+    --secColor:#083C3B;
+    --mainFont : font-family: 'Open Sans', sans-serif; 
+}
 
 body {
    }

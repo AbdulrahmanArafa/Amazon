@@ -1,0 +1,56 @@
+/* ================================================================global  container */
+body {
+    box-sizing: border-box;
+}
+
+/* ================================= local  var maun color and font  ====================================*/
+:root {
+
+
+
+}
+
+body {
+
+}
+
+/* ============================= login form farm =============================*/
+.login-box {
+
+    /*==================put in the center===============*/
+  
+}
+
+/* ======================== font  */
+
+
+.login-box h2 {
+    text-align: center;
+    padding: 0;
+
+}
+
+/* ======================== end of font styles ======================== */
+.login-box .user-box input {
+
+
+
+}
+
+.login-box .user-box label {
+
+}
+
+/* ============================== animation styles*/
+
+
+/* ================================================================= Responsive Styles  */
+
+/*================================================================smart phone styles*/
+@media screen and (max-width: 768px) {}
+
+/*================================================================ tablets styles */
+@media screen and (min-width: 768px) and (max-width:1023px) {}
+
+/* ============================== desktop styles*/
+@media screen and (min-width: 1023px) {}
