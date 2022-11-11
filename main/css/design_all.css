@@ -1,0 +1,45 @@
+/* global variable  */
+
+
+/* end of global variable  */
+
+body {
+    box-sizing: border-box;
+}
+
+
+/* global Rule */
+
+body {
+   }
+
+.container {}
+
+
+/* media query */
+
+@media (min-width: 768) {
+    .container {
+        width: 750;
+    }
+}
+
+@media (min-width: 992) {
+    .container {
+        width: 970;
+    }
+}
+
+@media (min-width: 1200) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* end of global Rule */
+
+
+
+
+
