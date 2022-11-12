@@ -1,53 +1,264 @@
-/* ================================================================global  container */
-body {
-    box-sizing: border-box;
-}
-
 /* ================================= local  var maun color and font  ====================================*/
 :root {
+    --colMain: #33737A;
+    --colBack: #183C47;
+    --colShadow: #071317;
 
 
 
 }
+
+/* ================================================================global  container */
 
 body {
-
+    box-sizing: border-box;
+    background-color: var(--colBack);
 }
+
+/* ======================== global font =================================**/
 
 /* ============================= login form farm =============================*/
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colBack);
+    transform: translateY(113px);
+    -webkit-transform: translateY(113px);
+    -moz-transform: translateY(113px);
+    -ms-transform: translateY(113px);
+    -o-transform: translateY(113px);
+}
+
 .login-box {
+    position: relative;
+    background-color: var(--colMain);
+    width: 600px;
+    height: 350px;
+    padding: 0 15px;
+    margin: 0 auto;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    box-shadow: 1px 18px 25px 10px var(--colShadow);
 
-    /*==================put in the center===============*/
-  
 }
 
-/* ======================== font  */
-
-
-.login-box h2 {
-    text-align: center;
-    padding: 0;
-
+.login-box form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
-/* ======================== end of font styles ======================== */
 .login-box .user-box input {
+    position: relative;
 
 
+
+}
+
+.user-box input {
+    width: 300px;
+    height: 60px;
+    background-color: var(--colBack);
+    border-color: var(--colShadow);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 38px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .login-box .user-box label {
+    position: absolute;
+    left: 5px;
+    padding: 2px;
+    pointer-events: none;
+    color: #e8e8e8;
+    z-index: 5;
+    transform: translateY(18px);
+    -webkit-transform: translateY(18px);
+    -moz-transform: translateY(18px);
+    -ms-transform: translateY(18px);
+    -o-transform: translateY(18px);
+    transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btrform input {
+
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin: auto;
+    letter-spacing: 4px;
+    border: 1px solid var(--colBack);
+
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+
+    transition: 150ms;
+    -webkit-transition: 150ms;
+    -moz-transition: 150ms;
+    -ms-transition: 150ms;
+    -o-transition: 150ms;
+}
+
+
+
+/* ============================= font form ====*/
+.container h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #F4924B;
+    margin: 12px;
 
 }
 
+.user-box input[type="email"],
+.user-box input[type="password"] {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 11px;
+}
+
+/* ======================== end of font styles ======================== */
+
+
 /* ============================== animation styles*/
 
+/* ============================= on input  =================*/
+input:focus {
+    outline: none;
+    border: none;
+
+    border-bottom: 1.5px solid #F4924B;
+}
+
+.user-box input:focus~label,
+.user-box input:valid~label,
+.user-box input:not(:placeholder-shown)~label {
+    background-color: transparent;
+    padding: 0 0.2em;
+    color: #F4924B;
+    transform: translateY(-15px) scale(0.9);
+    -webkit-transform: translateY(-15px) scale(0.9);
+    -moz-transform: translateY(-15px) scale(0.9);
+    -ms-transform: translateY(-15px) scale(0.9);
+    -o-transform: translateY(-15px) scale(0.9);
+}
+
+
+
+/* ============================= on submit =============================*/
+
+.btrform input[type="submit"]:hover {
+    background-color: var(--colShadow);
+    color: #fff;
+    -webkit-box-shadow: 16px 0px 300px 9px rgba(230, 246, 247, 1);
+    -moz-box-shadow: 16px 0px 300px 9px rgba(230, 246, 247, 1);
+    box-shadow: 16px 0px 300px 9px rgba(230, 246, 247, 1);
+
+}
+
+.btrform {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.regester-box {
+    text-decoration: none;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    color: #CBBDDB;
+}
+
+.regester-box a {
+    text-decoration: none;
+    margin: auto;
+    color: var(--colShadow);
+
+}
 
 /* ================================================================= Responsive Styles  */
 
 /*================================================================smart phone styles*/
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+
+    .container h2 {
+        font-size: 25px;
+        font-weight: 200;
+    }
+
+    .login-box {
+        width: 300px;
+        height: 310px;
+        padding: 0 12px;
+    }
+
+    .user-box input {
+        width: 200px;
+        height: 30px;
+        margin-bottom: 25px;
+    }
+
+    .login-box .user-box label {
+        transform: translateY(8px);
+        -webkit-transform: translateY(8px);
+        -moz-transform: translateY(8px);
+        -ms-transform: translateY(8px);
+        -o-transform: translateY(8px);
+    }
+
+    .btrform {
+        flex-direction: column;
+        margin-top: 5px;
+
+    }
+
+    .btrform input {
+        padding: 10px 10px;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 200px;
+
+    }
+
+    .regester-box {
+        text-decoration: none;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        color: #CBBDDB;
+    }
+
+}
 
 /*================================================================ tablets styles */
 @media screen and (min-width: 768px) and (max-width:1023px) {}
