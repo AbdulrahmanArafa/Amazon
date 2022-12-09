@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
 }
-
+/******* ********************** end of gable *******/
 /*************************************scroll*/
 ::-webkit-scrollbar{
     width: 8px;
@@ -19,8 +19,11 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #ff6e42;
 }
-
-/****************************************************************/
+html {
+    scroll-behavior: smooth;
+  }
+  
+/*****************************end of scroll ***********************************/
 :root {
     --frontC: #ECEEFA;
     --DarkMode: #2B2B2B;
@@ -36,7 +39,7 @@ body {
 }
 
 .container {
-    max-width: 50rem;
+    max-width: 60rem;
     margin: auto;
     padding: 0 1.5rem;
     background-color: var(--frontC);
@@ -66,7 +69,11 @@ header {
 
 .Hbar li a {
     text-decoration: none;
+
 }
+
+
+
 
 
 

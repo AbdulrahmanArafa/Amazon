@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One place:Sign Up</title>
+    <link rel="stylesheet" href="./../CSS/maincss .css">
+    <link rel="stylesheet" href="./../CSS/all.min.css">
+    <link rel="stylesheet" href="./../CSS/signUp.css">
+    <!-- add scss  -->
+    <link rel="stylesheet" href="./../CSS/addmore.scss">
+    <!-- plug-in from github to make tel input   -->
+    <link rel="stylesheet" href="./../CSS/intlTelInput.css">
+
+</head>
+
+<body>
+    <div class="signUp">
+        <h2>Sign Up</h2>
+        <form method="post" action="" class="signUp-form" onsubmit="return checkForm3(this);">
+            <div class="inputbox">
+                <input type="text" required />
+                <label>First Name</label>
+                <span class="icon-name"><i class="fa-solid fa-user"></i></span>
+            </div>
+
+            <!-- /************************/ -->
+
+            <div class="inputbox">
+                <input type="text" required />
+                <label>Last Name</label>
+                <span class="icon-name"><i class="fa-solid fa-user"></i></span>
+            </div>
+            <!-- /************************/ -->
+            <div class="inputbox" id="item">
+                <input type="email" required />
+                <label>E-mail</label>
+                <span class="icon-name"><i class="fa-solid fa-envelope"></i></span>
+            </div>
+            <!-- /************************/ -->
+            <div class="inputbox" id="pass">
+                <input type="password" required onchange="form.pwd2.pattern = this.value;" name="pwd1"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" placeholder=""  />
+                <div class="pass-strength">
+                    <div class="strength-percent"><span></span></div>
+                    <span class="strength-label">Strength</span>
+                </div>
+                <div class="input-group">
+                    <span class="ripple" id="ripple"><i class="fa-solid fa-eye"></i></span>
+                    <span class="toggle "><i class="fa-solid fa-eye-slash"></i></span>
+                </div>
+                <label>Password</label>
+                <span class="icon-name"><i class="fa-solid fa-lock"></i></span>
+            </div>
+
+
+            <div class="inputbox">
+                <input type="password" required />
+                <label>Re-password</label>
+                <span class="icon-name"><i class="fa-solid fa-lock"></i></span>
+            </div>
+            <!-- /************************/ -->
+            <div class="inputbox2">
+                <input type="tel" required id="phone" />
+                <span class="icon-name"><i class="fa-solid fa-phone"></i></span>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" required />
+                <label>Country</label>
+                <span class="icon-name"><i class="fa-solid fa-globe"></i>   </span>
+            </div>
+
+
+            <button type="submit" class="button" onmousedown="buttonClick()">Submit
+                <div id="splash"></div>
+            </button>
+
+        </form>
+
+
+    </div>
+    <script type="text/javascript" src="../JS/btr.js">
+    </script>
+    <script src="../JS/intlTelInput.js" ></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+
+            utilsScript: "../JS/utils.js",
+        });
+    </script>
+    <script src="../JS/password.js"></script>
+
+
+</body>
+
+</html>
+<!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"  -->

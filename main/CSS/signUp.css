@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+
+}
+
+@keyframes cloud {
+    100% {
+        background-size: 2900px 920px;
+
+    }
+
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0px;
+    padding: 0px 24px;
+    background-image: url(../imges/Sea\ of\ Clouds-10s-1536px.svg);
+    background-size: 2500px 900px;
+    background-position: -500px -1000px;
+    animation: cloud 10s infinite alternate linear;
+    -webkit-animation: cloud 10s infinite alternate linear;
+}
+
+.signUp {
+    width: 60%;
+    padding: 40px 30px 44px;
+    text-align: center;
+    background-color: var(--frontC);
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+}
+
+.signUp-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100%r, 1fr));
+    gap: 5px;
+    place-items: center;
+    width: 100%;
+    margin: 0;
+    justify-items: start;
+}
+
+.signUp-form>div {
+    text-align: center;
+    width: 80%;
+}
+
+#item {
+    grid-column: 1 / span 2;
+    width: 90%;
+}
+
+
+
+button,
+input {
+    border: 0;
+    width: 100% !important;
+    height: 60px;
+    background-color: transparent;
+    outline: none;
+}
+
+.inputbox {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.inputbox .icon-name {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    pointer-events: none;
+
+    transform: 0 -50%;
+    -webkit-transform: 0 -50%;
+    -moz-transform: 0 -50%;
+    -ms-transform: 0 -50%;
+    -o-transform: 0 -50%;
+}
+
+.inputbox2 {
+    position: relative;
+    margin-bottom: 16px;
+
+
+}
+
+.inputbox2 label {
+    position: absolute;
+    top: 50%;
+    left: 36px;
+    translate: 0 -50%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.inputbox2 .icon-name {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    translate: 0 -50%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+
+}
+
+#phone {
+    width: 100%;
+    padding: 0 24px 0 36px;
+    border-bottom: 2px solid #2b3442;
+    height: 72px;
+
+}
+
+
+.inputbox input {
+    padding: 0 24px 0 36px;
+    border-bottom: 2px solid #2b3442;
+    height: 72px;
+}
+
+/******* ********************** animation in input */
+input:focus {
+    border-color: var(--logoColor) !important;
+}
+
+:is(input:focus, input:valid)~span {
+    color: var(--logoColor);
+}
+
+
+.inputbox label {
+    position: absolute;
+    top: 65%;
+    left: 36px;
+    color: rgba(14, 13, 13, 0.4);
+    translate: 0 -50%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+:is(input:focus, input:valid)~label {
+    translate: -40px -40px;
+    scale: 0.7;
+}
+
+
+
+
+
+/***** ************************ google   btr ****** ************************/
+.button {
+    position: relative;
+    cursor: pointer;
+    color: var(--frontC);
+    background-color: var(--logoColor);
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    overflow: hidden;
+    grid-column: 1 / span 2;
+    width: 90%;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.button #splash {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 0%;
+    background: rgba(255, 255, 255, .2);
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: .3s ease-out;
+    -webkit-transition: .3s ease-out;
+    -moz-transition: .3s ease-out;
+    -ms-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+}
+
+button:hover {
+    background-color: #da5626cc;
+}
+
+/***** ** ********************** change the value of the plug-int*/
+.iti__flag-container {
+    left: 174px !important;
+}
+
+/* password strength */
+.ripple,
+.toggle {
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.ripple {
+    visibility: hidden;
+}
+
+
+
+.pass-strength {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.strength-label {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.strength-percent {
+    flex: 1;
+    height: 5px;
+    border-radius: 10px;
+    display: block;
+    background: #eee;
+}
+
+.strength-percent span {
+    display: block;
+    height: 100%;
+    transition: all 0.4s;
+    border-radius: 10px;
+}
+
+.weak {
+    background: red;
+    width: 33%;
+}
+
+.average {
+    background: #ffd000;
+    width: 66%;
+}
+
+.strong {
+    background: green;
+    width: 100%;
+}
+
+/******* ********************** end of password *******/
+
+@media only screen and (max-width: 768px) {
+    .signUp-form {
+        grid-template-columns: repeat(1, minmax(100%, 1fr));
+        justify-items: center;
+    }
+
+    body {
+        padding: 0;
+        margin: 0px;
+        background-image: none;
+        background-color: var(--frontC);
+        background-color: #ECEEFA;
+
+    }
+
+
+
+    .signUp {
+        width: 100%;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+
+        background-color: #ECEEFA;
+    }
+
+    #item {
+        grid-column: 1 / span 1;
+        width: 80%;
+
+
+    }
+
+    .button {
+        grid-column: 1 / span 1;
+
+    }
+
+
+}

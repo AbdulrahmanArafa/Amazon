@@ -1,0 +1,231 @@
+@keyframes background {
+    100% {
+        background-size: 4500px 1000px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0px;
+    padding: 0px 24px;
+    background-image: url(../imges/Wave.svg);
+    background-size: 2500px 1000px;
+    background-position: -500px 0px;
+    animation: background 10s infinite alternate linear;
+    -webkit-animation: background 10s infinite alternate linear;
+}
+
+@media (width >=768px) {
+    body {
+        padding: 0;
+    }
+
+}
+
+
+/***************************** end of general stuff ************************\
+
+
+/*  ================================================================= start of login styles */
+.login{
+    width: 90%;
+    padding: 40px 30px 44px ;
+    text-align: center;
+    background-color: var(--frontC);
+    border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    -ms-border-radius: 22px;
+    -o-border-radius: 22px;
+
+    
+}
+@media (width >= 768px){
+    .login{
+        width: 380px;
+    }
+}
+.login >h2{
+    font-size: 36px;
+    color:var(--DarkMode);
+    font-weight: 500;
+    margin: 0 0 4px;
+}
+.logo-login{
+    margin: 0 auto 16px;
+    padding: 2px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.logo-login>a >img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border: 4px solid var(--DarkMode);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    
+}
+
+/***************************** text of login in footer*/
+.login  .text{
+    text-align: left;
+
+}
+
+
+.drop-list {
+    padding-left: 38px;
+}
+.show-help{
+    cursor: pointer;
+    
+    
+}
+.drop-list p{
+
+}
+
+.need{
+    margin-top: 20px;
+    position: relative;
+    
+}
+#toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28%;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    height: 22px;
+  }
+
+  #toggle:checked ~ .drop-list {
+   display: none;
+  }
+  #toggle:not(:checked) ~ .drop-list {
+    display: block;
+    opacity: 1;
+    
+}
+
+
+/***************************** text of login in footer*/
+
+
+.login-form{
+    display: grid;
+    gap: 16px;
+    place-items: center;
+    width: 100%;
+    margin: 0;
+}
+.text-field{
+    width: 100%;
+    position: relative;
+
+}
+.text-field span{
+    position: absolute;
+    top:35% ;
+    left: 10px;
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.9);
+    transition: 0 -40%;
+    -webkit-transition: 0 -40%;
+    -moz-transition: 0 -40%;
+    -ms-transition: 0 -40%;
+    -o-transition: 0 -40%;
+}
+.login-form input,
+.login-form button{
+    width: 100%;
+    height: 60px;
+    background-color: var(--frontC);
+    outline: none;
+    padding-left: 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.login-form button{
+    position: relative;
+    cursor: pointer;
+    color: var(--frontC);
+    background-color: var(--logoColor);
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    overflow: hidden;
+
+}
+
+/*****  ************************ end of login style ******  **  **/
+/******************************** start of login styles animation** ***/
+.login-form input:focus{
+    border-color:var(--logoColor) ;
+    box-shadow: 0px 0px 20px 0px var(--logoColor);
+
+}
+.login-form   input:focus ~ span   {
+    color: var(--logoColor);
+
+}
+.login-form  a{
+    color: #157ae1;
+    font-size: 16px;
+    text-align: left;
+    text-decoration: none;
+
+}
+/*****************************end of    login styles animation *****   /
+
+
+
+/***************************** btr effect google ************************/
+.button #splash{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 0%;
+    background: rgba(255, 255, 255, .2);
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: .3s ease-out;
+    -webkit-transition: .3s ease-out;
+    -moz-transition: .3s ease-out;
+    -ms-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+}
+button:hover {
+    background-color: #da5626cc;
+}
