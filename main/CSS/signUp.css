@@ -149,7 +149,7 @@ input:focus {
 
 .inputbox label {
     position: absolute;
-    top: 65%;
+    top: 50%;
     left: 36px;
     color: rgba(14, 13, 13, 0.4);
     translate: 0 -50%;
@@ -213,10 +213,6 @@ button:hover {
     background-color: #da5626cc;
 }
 
-/***** ** ********************** change the value of the plug-int*/
-.iti__flag-container {
-    left: 174px !important;
-}
 
 /* password strength */
 .ripple,

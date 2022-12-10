@@ -19,7 +19,7 @@
 <body>
     <div class="signUp">
         <h2>Sign Up</h2>
-        <form method="post" action="" class="signUp-form" onsubmit="return checkForm3(this);">
+        <form method="post" action="" class="signUp-form" onsubmit="return matchPassword()">
             <div class="inputbox">
                 <input type="text" required />
                 <label>First Name</label>
@@ -35,14 +35,15 @@
             </div>
             <!-- /************************/ -->
             <div class="inputbox" id="item">
-                <input type="email" required />
-                <label>E-mail</label>
+                <input type="email" onkeypress="lableSetE()" id="email" required />
+                <label id="styleE">E-mail</label>
                 <span class="icon-name"><i class="fa-solid fa-envelope"></i></span>
             </div>
             <!-- /************************/ -->
             <div class="inputbox" id="pass">
-                <input type="password" required onchange="form.pwd2.pattern = this.value;" name="pwd1"
-                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" placeholder=""  />
+                <input type="password" onkeypress="lableSet()" name="pwd1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    id="pass" required />
                 <div class="pass-strength">
                     <div class="strength-percent"><span></span></div>
                     <span class="strength-label">Strength</span>
@@ -51,13 +52,13 @@
                     <span class="ripple" id="ripple"><i class="fa-solid fa-eye"></i></span>
                     <span class="toggle "><i class="fa-solid fa-eye-slash"></i></span>
                 </div>
-                <label>Password</label>
+                <label id="styleL">Password</label>
                 <span class="icon-name"><i class="fa-solid fa-lock"></i></span>
             </div>
 
 
             <div class="inputbox">
-                <input type="password" required />
+                <input type="password" required id="Repass" />
                 <label>Re-password</label>
                 <span class="icon-name"><i class="fa-solid fa-lock"></i></span>
             </div>
@@ -70,7 +71,7 @@
             <div class="inputbox">
                 <input type="text" required />
                 <label>Country</label>
-                <span class="icon-name"><i class="fa-solid fa-globe"></i>   </span>
+                <span class="icon-name"><i class="fa-solid fa-globe"></i> </span>
             </div>
 
 
@@ -84,7 +85,7 @@
     </div>
     <script type="text/javascript" src="../JS/btr.js">
     </script>
-    <script src="../JS/intlTelInput.js" ></script>
+    <script src="../JS/intlTelInput.js"></script>
     <script>
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
