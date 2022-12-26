@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One place:Sign Up</title>
+    <title>One place|Sign Up</title>
     <link rel="stylesheet" href="./../CSS/maincss .css">
     <link rel="stylesheet" href="./../CSS/all.min.css">
     <link rel="stylesheet" href="./../CSS/signUp.css">
@@ -21,9 +21,9 @@
     <body>
         <div class="signUp">
             <h2>Sign Up</h2>
-            <form method="post" action="" class="signUp-form" id='regFrom'>
+            <form method="post" action="./../PHP server/signup.php" class="signUp-form" id='regFrom'>
                 <div class="inputbox">
-                    <input type="text" required />
+                    <input type="text" required name="first_name" />
                     <label>First Name</label>
                     <span class="icon-name"><i class="fa-solid fa-user"></i></span>
                 </div>
@@ -31,18 +31,18 @@
                 <!-- /************************/ -->
 
                 <div class="inputbox">
-                    <input type="text" required />
+                    <input type="text" required name="last_name"/>
                     <label>Last Name</label>
                     <span class="icon-name"><i class="fa-solid fa-user"></i></span>
                 </div>
                 <!-- /************************/ -->
                 <div class="inputbox" id="item">
-                    <input type="email" onkeypress="lableSetE()" id="email" required />
+                    <input type="email" onkeypress="lableSetE()" id="email" name="email" required />
                     <label id="styleE">E-mail</label>
                     <span class="icon-name"><i class="fa-solid fa-envelope"></i></span>
                 </div>
                 <!-- /************************/ -->
-                <div class="inputbox" id="pass">
+                <div class="inputbox"  id="pass">
                     <input type="password" onkeypress="lableSet()" id="pwd1" name="pwd1"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
@@ -73,9 +73,9 @@
                 </div>
 
                 <div class="inputradio">
-                    <input class="radio-input" id="seller" type="radio" name="logas" checked />
+                    <input class="radio-input" id="seller" type="radio" name="logas" value="seller" checked />
                     <span class="radio" for="seller">seller</span>
-                    <input class="radio-input" id="customer" type="radio" name="logas" />
+                    <input class="radio-input" id="customer" type="radio" name="logas" value="customer" />
                     <span class="radio" for="customer">customer</span>
                 </div>
                 <!-- btr function -->
