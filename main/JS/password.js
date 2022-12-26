@@ -53,47 +53,51 @@ function RipplePassInput(e) {
   }
 }
 
-// password confirm
 
-function matchPassword() {
-  var pass1 = document.getElementById("Repass").value;
-  var pass2 = document.getElementById("pass").value;
-  if (Repass != pass) {
-    alert("Please enter a match password");
-    document.getElementById("Repass").focus();
+/***  validPassword  */
+
+function validPassword() {
+  let pass1 = document.getElementById("pwd1").value;
+  let pass2 = document.getElementById("pwd2").value;
+  var valid = true;
+  if (pass1 != pass2) {
+    //alert("Passwords Do not match");
+    document.getElementById("pwd2").style.borderColor = "rgb(255,0,0)";
+    document.getElementById("pwd2").focus();
+    valid = false;
     return false;
   } else {
-    return true;
+    return valid;
   }
 }
-// make it more confirmation
+document.getElementById("regFrom").onsubmit = validPassword;
+
+
+/***   */
+
+
+
+
+// make label  more confirmation
 
 function lableSet() {
-    
-
-   var pass = document.getElementById("pass").value;
-    if ('' != pass || pass.length()<0) {
-        document.getElementById("styleL").style.translate = "-40px -40px";
-        document.getElementById("styleL").style.scale = "0.7";
-    } else
-    {
-        document.getElementById("styleL").style.translate = "40px 40px";
-        document.getElementById("styleL").style.scale = "1";
-    }
-   
+  var pass = document.getElementById("pass").value;
+  if ("" != pass || pass.length() < 0) {
+    document.getElementById("styleL").style.translate = "-40px -40px";
+    document.getElementById("styleL").style.scale = "0.7";
+  } else {
+    document.getElementById("styleL").style.translate = "40px 40px";
+    document.getElementById("styleL").style.scale = "1";
+  }
 }
-function lableSetE(){
-    var email = document.getElementById("email").value;
+function lableSetE() {
+  var email = document.getElementById("email").value;
 
-
-    if ('' != email || email.length()<0) {
-        document.getElementById("styleE").style.translate = "-40px -40px";
-        document.getElementById("styleE").style.scale = "0.7";
-    }
-    else{
-        document.getElementById("styleE").style.translate = "0 -50%";
-        document.getElementById("styleE").style.scale = "1";
-    }
-
-
+  if ("" != email || email.length() < 0) {
+    document.getElementById("styleE").style.translate = "-40px -40px";
+    document.getElementById("styleE").style.scale = "0.7";
+  } else {
+    document.getElementById("styleE").style.translate = "0 -50%";
+    document.getElementById("styleE").style.scale = "1";
+  }
 }

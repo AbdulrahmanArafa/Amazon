@@ -3,13 +3,13 @@
 
 }
 
-@keyframes cloud {
+/* @keyframes cloud {
     100% {
         background-size: 2900px 920px;
 
     }
 
-}
+} */
 
 html,
 body {
@@ -21,17 +21,15 @@ body {
     display: grid;
     place-items: center;
     margin: 0px;
-    padding: 0px 24px;
-    background-image: url(../imges/Sea\ of\ Clouds-10s-1536px.svg);
-    background-size: 2500px 900px;
-    background-position: -500px -1000px;
-    animation: cloud 10s infinite alternate linear;
-    -webkit-animation: cloud 10s infinite alternate linear;
+    padding: 0px 0px;
+    background-image: url(../imges/Signup.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .signUp {
-    width: 60%;
-    padding: 40px 30px 44px;
+    width: 80%;
+    padding: 25px  25px;
     text-align: center;
     background-color: var(--frontC);
     border-radius: 22px;
@@ -43,12 +41,12 @@ body {
 
 .signUp-form {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100%r, 1fr));
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
     gap: 5px;
     place-items: center;
     width: 100%;
     margin: 0;
-    justify-items: start;
+    justify-items: center;
 }
 
 .signUp-form>div {
@@ -66,7 +64,9 @@ body {
 button,
 input {
     border: 0;
-    width: 100% !important;
+    padding-left: 25px;
+    font-size: medium;
+    width: 95% ;
     height: 60px;
     background-color: transparent;
     outline: none;
@@ -132,7 +132,6 @@ input {
 
 
 .inputbox input {
-    padding: 0 24px 0 36px;
     border-bottom: 2px solid #2b3442;
     height: 72px;
 }
@@ -142,8 +141,8 @@ input:focus {
     border-color: var(--logoColor) !important;
 }
 
-:is(input:focus, input:valid)~span {
-    color: var(--logoColor);
+:is(input:focus, input:valid)~.icon-name {
+    color: var(--logoColor) !important; 
 }
 
 
@@ -273,6 +272,25 @@ button:hover {
 }
 
 /******* ********************** end of password *******/
+/****************************************btr groub radio*/
+.inputradio{
+    box-sizing: border-box;
+  color: #222;
+  height: 64px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.radio-input{
+    width: 20px !important;
+    accent-color:var(--logoColor);
+}
+
+ 
+  
+ 
+/**/
 
 @media only screen and (max-width: 768px) {
     .signUp-form {

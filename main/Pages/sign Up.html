@@ -17,86 +17,95 @@
 </head>
 
 <body>
-    <div class="signUp">
-        <h2>Sign Up</h2>
-        <form method="post" action="" class="signUp-form" onsubmit="return matchPassword()">
-            <div class="inputbox">
-                <input type="text" required />
-                <label>First Name</label>
-                <span class="icon-name"><i class="fa-solid fa-user"></i></span>
-            </div>
 
-            <!-- /************************/ -->
-
-            <div class="inputbox">
-                <input type="text" required />
-                <label>Last Name</label>
-                <span class="icon-name"><i class="fa-solid fa-user"></i></span>
-            </div>
-            <!-- /************************/ -->
-            <div class="inputbox" id="item">
-                <input type="email" onkeypress="lableSetE()" id="email" required />
-                <label id="styleE">E-mail</label>
-                <span class="icon-name"><i class="fa-solid fa-envelope"></i></span>
-            </div>
-            <!-- /************************/ -->
-            <div class="inputbox" id="pass">
-                <input type="password" onkeypress="lableSet()" name="pwd1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                    id="pass" required />
-                <div class="pass-strength">
-                    <div class="strength-percent"><span></span></div>
-                    <span class="strength-label">Strength</span>
+    <body>
+        <div class="signUp">
+            <h2>Sign Up</h2>
+            <form method="post" action="" class="signUp-form" id='regFrom'>
+                <div class="inputbox">
+                    <input type="text" required />
+                    <label>First Name</label>
+                    <span class="icon-name"><i class="fa-solid fa-user"></i></span>
                 </div>
-                <div class="input-group">
-                    <span class="ripple" id="ripple"><i class="fa-solid fa-eye"></i></span>
-                    <span class="toggle "><i class="fa-solid fa-eye-slash"></i></span>
+
+                <!-- /************************/ -->
+
+                <div class="inputbox">
+                    <input type="text" required />
+                    <label>Last Name</label>
+                    <span class="icon-name"><i class="fa-solid fa-user"></i></span>
                 </div>
-                <label id="styleL">Password</label>
-                <span class="icon-name"><i class="fa-solid fa-lock"></i></span>
-            </div>
+                <!-- /************************/ -->
+                <div class="inputbox" id="item">
+                    <input type="email" onkeypress="lableSetE()" id="email" required />
+                    <label id="styleE">E-mail</label>
+                    <span class="icon-name"><i class="fa-solid fa-envelope"></i></span>
+                </div>
+                <!-- /************************/ -->
+                <div class="inputbox" id="pass">
+                    <input type="password" onkeypress="lableSet()" id="pwd1" name="pwd1"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        id="pass" required />
+                    <div class="pass-strength">
+                        <div class="strength-percent"><span></span></div>
+                        <span class="strength-label">Strength</span>
+                    </div>
+                    <div class="input-group">
+                        <span class="ripple" id="ripple"><i class="fa-solid fa-eye"></i></span>
+                        <span class="toggle "><i class="fa-solid fa-eye-slash"></i></span>
+                    </div>
+                    <label id="styleL">Password</label>
+                    <span class="icon-name"><i class="fa-solid fa-lock"></i></span>
+                </div>
 
 
-            <div class="inputbox">
-                <input type="password" required id="Repass" />
-                <label>Re-password</label>
-                <span class="icon-name"><i class="fa-solid fa-lock"></i></span>
-            </div>
-            <!-- /************************/ -->
-            <div class="inputbox2">
-                <input type="tel" required id="phone" />
-                <span class="icon-name"><i class="fa-solid fa-phone"></i></span>
-            </div>
+                <div class="inputbox">
+                    <input type="password" required id="pwd2" />
+                    <label>Re-password</label>
+                    <span class="icon-name"><i class="fa-solid fa-lock"></i></span>
+                </div>
+                <!-- /************************/ -->
+                <div class="inputbox2">
+                    <input type="tel" required id="phone" name="phone" pattern="[0-9]+" minlength="11" maxlength="11"
+                        required title="Only Number" />
+                    <span class="icon-name"><i class="fa-solid fa-phone"></i></span>
+                </div>
 
-            <div class="inputbox">
-                <input type="text" required />
-                <label>Country</label>
-                <span class="icon-name"><i class="fa-solid fa-globe"></i> </span>
-            </div>
+                <div class="inputradio">
+                    <input class="radio-input" id="seller" type="radio" name="logas" checked />
+                    <span class="radio" for="seller">seller</span>
+                    <input class="radio-input" id="customer" type="radio" name="logas" />
+                    <span class="radio" for="customer">customer</span>
+                </div>
+                <!-- btr function -->
 
+                <button type="submit" class="button" onmousedown="buttonClick()">Submit
+                    <div id="splash"></div>
+                </button>
 
-            <button type="submit" class="button" onmousedown="buttonClick()">Submit
-                <div id="splash"></div>
-            </button>
+            </form>
 
-        </form>
-
-
-    </div>
-    <script type="text/javascript" src="../JS/btr.js">
-    </script>
-    <script src="../JS/intlTelInput.js"></script>
-    <script>
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-
-            utilsScript: "../JS/utils.js",
-        });
-    </script>
-    <script src="../JS/password.js"></script>
+            <!-- <button type="submit" class="button" onmousedown="buttonClick()">Submit
+            <div id="splash"></div>
+        </button> -->
 
 
-</body>
+
+
+            </script>
+            <script src="../JS/intlTelInput.js"></script>
+            <script>
+                var input = document.querySelector("#phone");
+                window.intlTelInput(input, {
+
+                    utilsScript: "../JS/utils.js",
+                });
+            </script>
+            <script src="../JS/password.js"></script>
+
+
+    </body>
 
 </html>
 <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"

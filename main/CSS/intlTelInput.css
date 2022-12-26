@@ -9,13 +9,12 @@
 }
 
 
-
 .iti__flag-container {
   position: absolute;
   top: 0;
   bottom: 0;
   padding: 1px;
-  left: 90% !important;
+  left: 85% !important;
 }
 
 .iti__selected-flag {
