@@ -315,7 +315,9 @@ a {
 
 
 /*---------------------------------------------------------------- footer  */
+
 .site-footer {
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.3fr 1.7fr;
@@ -327,14 +329,7 @@ a {
     " mark mark";
 }
 
-.site-footer hr {
-  border-top-color: #bbb;
-  opacity: 0.5
-}
 
-.site-footer hr.small {
-  margin: 20px 0
-}
 
 .site-footer h6 {
   color: #fff;
@@ -379,7 +374,7 @@ a {
 .about {
   grid-area: about;
   background-color: #232F3E;
-  padding: 45px 0 20px;
+  padding: 45px 25px 20px;
   font-size: 15px;
   line-height: 24px;
   color: #737373
@@ -493,8 +488,8 @@ a {
   margin: 10px auto;
   width: 60%;
   height: 0px;
-  border: solid 1px white;
-  background-color: transparent;
+  border: solid 1px var(--logoColor);
+  background-color: var(--logoColor);
   opacity: 1;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -519,12 +514,99 @@ a {
   color: var(--logoColor);
   background-color: transparent;
 }
-.mark{
+
+.mark {
   height: 100%;
   width: 100%;
-  background-color:#232F3E ;
+  background-color: #232F3E;
   grid-area: mark;
 }
+
 .feedback {
   grid-area: feedback;
+  background-color: #232F3E;
+  width: 100%;
+
+
 }
+
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 25px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato';
+  font-weight: 400;
+  
+}
+.form-group >input{
+  width: 35rem ;
+  height: 30px;
+
+
+}
+
+.form-control,
+textarea {
+  resize: none;
+  width: 35rem ;
+  padding: 8px;
+  background-color: #232F3E;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  width: 35rem ;
+  background-color: var(--logoColor);
+ padding: 8px;
+  margin-top: 15px;
+  height: 34px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -25px, 0px);
+  -webkit-transform: translate3d(0px, -25px, 0px);
+  -moz-transform: translate3d(0px, -25px, 0px);
+  -ms-transform: translate3d(0px, -25px, 0px);
+  -o-transform: translate3d(0px, -25px, 0px);
+}
+
+/* Begin Right Contact Page */
