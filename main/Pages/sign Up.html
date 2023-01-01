@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One place|Sign Up</title>
     <link rel="stylesheet" href="./../CSS/maincss .css">
     <link rel="stylesheet" href="./../CSS/all.min.css">
     <link rel="stylesheet" href="./../CSS/signUp.css">
-    <!-- add scss  -->
-    <link rel="stylesheet" href="./../CSS/addmore.scss">
+    
     <!-- plug-in from github to make tel input   -->
     <link rel="stylesheet" href="./../CSS/intlTelInput.css">
-
+    
+    <title>One place|Sign Up</title>
 </head>
 
 <body>
@@ -21,9 +20,12 @@
     <body>
         <div class="signUp">
             <h2>Sign Up</h2>
-            <form method="post" action="./../PHP server/s.php" class="signUp-form" id='regFrom'>
+            <form method="post" action="./../PHP server/s.php" class="signUp-form" id='regFrom'
+                enctype="application/x-www-form-urlencoded">
                 <div class="inputbox">
-                    <input type="text" required name="first_name" />
+                    <input type="text" required name="first_name" id="NA-f" onchange="checkData()" />
+                    <span id="Fname" class="already"></span>
+
                     <label>First Name</label>
                     <span class="icon-name"><i class="fa-solid fa-user"></i></span>
                 </div>
@@ -37,7 +39,10 @@
                 </div>
                 <!-- /************************/ -->
                 <div class="inputbox" id="item">
-                    <input type="email" onkeypress="lableSetE()" id="email" name="email" required maxlength="255" />
+                    <input type="email" onkeypress="lableSetE()" id="email" name="email" onchange="checkDataMAil()"
+                        required maxlength="255" />
+                        <span id="Email" class="already"></span>
+
                     <label id="styleE">E-mail</label>
                     <span class="icon-name"><i class="fa-solid fa-envelope"></i></span>
                 </div>
@@ -80,20 +85,11 @@
                 </div>
                 <!-- btr function -->
 
-                <button type="submit" class="button" onmousedown="buttonClick()">Submit
+                <button type="submit" class="button" onmousedown="buttonClick() ">Submit
                     <div id="splash"></div>
                 </button>
 
             </form>
-
-            <!-- <button type="submit" class="button" onmousedown="buttonClick()">Submit
-            <div id="splash"></div>
-        </button> -->
-
-
-
-
-            </script>
             <script src="../JS/intlTelInput.js"></script>
             <script>
                 var input = document.querySelector("#phone");
@@ -103,6 +99,8 @@
                 });
             </script>
             <script src="../JS/password.js"></script>
+            <script src="../JS/dataflow.js"></script>
+
 
 
     </body>

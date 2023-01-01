@@ -65,7 +65,7 @@ header {
   z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 80px;
   /*******/
   padding: 0.25rem 0.75rem;
@@ -92,6 +92,9 @@ header {
 .Hbar li a {
   text-decoration: none;
 
+}
+.Hbar li a:hover{
+  color: var(--logoColor);
 }
 
 
@@ -570,8 +573,7 @@ a {
 
 }
 
-.form-control,
-textarea {
+.form-control{
   resize: none;
   width: 35rem ;
   padding: 8px;

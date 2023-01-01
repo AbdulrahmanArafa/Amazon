@@ -19,7 +19,8 @@ if ($logas == "customer") {
 		$sql = "INSERT INTO coustomers (first_name, last_name,password,email,phone,country)
         		VALUES ('$first_name','$last_name','$pwd1','$email','$phone','$country');";
 	} else {
-		die();
+		echo("your name is already taken");
+		exit();		
 	}
 
 } else {
@@ -35,7 +36,7 @@ if ($logas == "customer") {
 
 if (mysqli_query($conn, $sql)) {
 
-	header('location: http://localhost/dashboard/test/main/index.html'); //?=page you will go when submetion is correct
+	header('location: http://localhost/test/main/Pages/profile.html'); //?=page you will go when submetion is correct
 } else {
 
 	echo 'ERROR :' . mysqli_error($conn);

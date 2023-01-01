@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../CSS/maincss .css">
+    <link rel="stylesheet" href="./../CSS/all.min.css">
+    <link rel="stylesheet" href="./../CSS/temp.css">
+    <title>One place|Temp</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <input type="checkbox" id="nav-check">
+
+                <div class="nav-header">
+                    <div class="nav-title">
+                        <a href="./../index.html"> ONE PLACE</a>
+                    </div>
+                </div>
+
+
+                <!-- in response  -->
+                <div class="nav-btn">
+                    <label for="nav-check">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="nav-links">
+                    <a href="">cart</a>
+                    <a href=""> x</a>
+                    <a href="">x</a>
+                    <a href="">x</a>
+                    <a href="#About">contact us</a>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- view product --------------------------------------------------------------------------------------------- -->
+        <div class="main">
+            <div class="product page" style="display: none;">
+
+                <!-- more -->
+                <div id='items' class='items'></div>
+
+                <div><a href="javascript:void(0)" class="btn2" onclick="addprodect()">Load more</a></div>
+
+                <template id='template'>
+
+                    <div class="item-image" id="setimg">
+
+                    </div>
+                    <div class=" item-title">{{title}}
+                    </div>
+
+
+                </template>
+
+
+            </div>
+            <div class="mycard page" style="display: none;">
+                <h2>MY CART</h2>
+                <div class="list_your">
+                    <ul id="mycard_list">
+                    </ul>
+                </div>
+                <button class="btr">checked</button>
+            </div>
+
+            <div class="category page" style="display: none;"></div>
+            <div class="favorite page" style="display: none;"></div>
+            <div class="Rate page" style="display: none;"></div>
+            <div class=" Reports page" style="display: none;"></div>
+            <div class=" Admin page" style="display: none;"></div>
+            <div class=" Settings page" style="display: none;"></div>
+            <div class=" Addproduct page" style="display: none;">
+
+
+                <div class="wrapper">
+                    <header>Add Product</header>
+                    <form action="./../PHP server/addproduct.php" method="post" class="form1"
+                        enctype="multipart/form-data">
+
+                        <div class="form-input">
+                            <div class="preview">
+                                <img id="file-ip-1-preview">
+                            </div>
+                            <label for="file-ip-1">Select Image</label>
+
+                            <input type="file" id="file-ip-1" accept="image/*" name="img"
+                                onchange="showPreview(event);">
+                        </div>
+
+
+                        <label for="title">enter name of product</label>
+                        <input type="text" id="title" name="name" required>
+
+                        <label for="num">enter price of product</label>
+                        <input type="text" id="num" pattern="[0-9]+" name="price" required title="please enter number">
+
+                        <label for="category"> category</label>
+                        <div class="container-catagory">
+                            <div class="text-container">
+                                <input autocomplete="off" type="text" id="lis" list="category" placeholder="Enter Here"
+                                    role="combobox" list="" name="category" onkeyup="addoptional();" required />
+                                <datalist id="category" role="listbox">
+
+                                </datalist>
+                            </div>
+                        </div>
+
+
+                        <div class="txtarea" id="txt">
+                            <textarea rows='3' column="10" placeholder="describe your product" name="des"
+                                required></textarea>
+                        </div>
+                        <button type="submit" id="submit">Upload product</button>
+                    </form>
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+        <!-- sidler bar----------------------------------------------------------------------------------------------- -->
+        <div class="sider">
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="../imges/light mode.png" alt="LOgo">
+                    <h3>One Place</h3>
+                </div>
+                <ul id="remove">
+                    <li class="listCon" id="list ">
+
+                        <input class="check" type="radio" name="sec" id="Product" checked>
+                        <span class="icon"><i class="fa-solid fa-shop"></i></span>
+                        <span class="item">Product </span>
+                    </li>
+
+                    <li class="listCon">
+                        <input class="check" type="radio" name="sec">
+                        <span class="icon"><i class="fa-solid fa-cart-shopping"></i></span>
+                        <span class="item">My cart</span>
+
+                    </li>
+                    <li class="listCon">
+                        <input class="check" type="radio" name="sec">
+                        <span class="icon"><i class="fa-solid fa-table-cells-large"></i></span>
+                        <span class="item"> category </span>
+                    </li>
+                    <li class="listCon">
+                        <input class="check" type="radio" name="sec">
+                        <span class="icon"><i class="fa-solid fa-heart"></i></i></span>
+                        <span class="item"> favorite product </span>
+
+                    </li>
+                    <li class="listCon">
+                        <a class="logout" style="color: black; " href="./../PHP server/logout.php">
+                            <span class="icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                            <span class="item">log out</span>
+                        </a>
+                    </li>
+                    <!-- seller -->
+                    <li class="listCon">
+                        <input class="check cost" type="radio" name="sec">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Rate</span>
+
+                    </li>
+
+                    <li class="listCon">
+                        <input class="check cost" type="radio" name="sec">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </li>
+                    <li class="listCon">
+                        <input class="check cost" type="radio" name="sec">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admin</span>
+                    </li>
+                    <li class="listCon">
+                        <input class="check cost" type="radio" name="sec">
+                        <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                        <span class="item">Add product</span>
+
+                    </li>
+                    <li class="listCon">
+                        <input class="check cost" type="radio" name="sec">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- footer------------------------------------------------------------------- -->
+        <div class="footer">
+
+            <footer class="site-footer">
+                <a class="back" href="#">back To Top</a>
+                <div class="about">
+                    <div class="breif">
+                        <h6 id="About">About</h6>
+                        <p class="text-justify">Scanfcode.com is an initiative to help the
+                            upcoming programmers with the code. Scanfcode focuses on providing the most efficient
+                            code
+                            or
+                            snippets as the code wants to be simple. We will help programmers build up concepts in
+                            different
+                            programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP,
+                            Android,
+                            SQL and Algorithm.</p>
+                    </div>
+                    <!-- team -->
+                    <h6>Team member</h6>
+                    <ul class="footer__team">
+                        <li class="footer-links ">
+                            <a href="#" class="footer__list-link">
+                                <i class="fa-solid fa-user fa-1 "></i> <span> Abdul Rahman Arafa</span> </a>
+                        </li>
+                        <li class="footer-links ">
+                            <a href="#" class="footer__list-link">
+                                <i class="fa-solid fa-user fa-1 "></i> <span> Abdul Rahman Arafa</span></a>
+                        </li>
+                        <li class="footer-links ">
+                            <a href="#" class="footer__list-link">
+                                <i class="fa-solid fa-user fa-1 "></i><span> Abdul Rahman Arafa</span> </a>
+                        </li>
+                        <li class="footer-links ">
+                            <a href="#" class="footer__list-link">
+                                <i class="fa-solid fa-user fa-1 "></i><span> Abdul Rahman Arafa</span> </a>
+                        </li>
+                        <li class="footer-links ">
+                            <a href="#" class="footer__list-link">
+                                <i class="fa-solid fa-user fa-1"></i> <span> Abdul Rahman Arafa</span></a>
+                        </li>
+                    </ul>
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+
+                </div>
+                <div class="mark">
+                    <span class="line"></span>
+
+                    <div class="copyright">&copy;2022 <mark> One Place</mark> . All rights reserved.</div>
+                </div>
+                <div class="feedback">
+
+                    <form id="contact-form" class="form-horizontal" role="form" onsubmit="sendMail()">
+                        <h2 class="section-header">Contact</h2>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value=""
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"
+                                value="" required>
+                        </div>
+
+                        <textarea class="form-control" rows="10" placeholder="MESSAGE" id="email" name="message"
+                            required></textarea>
+
+                        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                            <div class="alt-send-button">
+                                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                            </div>
+
+                        </button>
+
+                    </form>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="../JS/session.js"></script>
+    <script src="../JS/temp.js"></script>
+
+
+</body>
+
+</html>

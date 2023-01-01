@@ -9,10 +9,7 @@ We are a team of software developers, we strive to simulate the Amazon website.
 |    👤  | Username | 
 | ----------- | ------------------ |  
 | Abdul Rahman Arafa |  Front-End & Software development
-| Omar Ibrahim | UX & UI Design
 | Mohamed Adel| Data base design 
-| Marwan Salem | Software development & Back-End
-| Zeyad Raafat | Back-End
 
 
 
